@@ -75,3 +75,27 @@ def jacob_h():
     return jH
 
 # Now the pre-requisites are done now let's start EKF
+
+def ekf_estimation(xEst, PEst, z, u):
+    # Prediction
+    xPred = motion_model(xEst, u)
+
+    jF = jacob_f(xEst, u)
+    PPred = jF @ PEst @ jF.T + Q
+
+    # Updation
+    jH = jacob_h()
+    zPred = observation_model(xPred)
+
+    Y = z - zPred
+    S = jH @ PPred @ jH.T + R
+    K = PPred @ jH.T @ np.linalg.inv(S)
+
+    xEst =  xPred + K @ Y
+    PEst = (np.eye(len(xEst)) - K @ jH) @ PPred
+
+    return xEst, PEst
+
+
+
+
