@@ -42,7 +42,7 @@ Both implementations run on the **same scenario data file** and are checked agai
 
 | Algorithm | Python | C++ | Tests | Docs | Validation |
 |---|:---:|:---:|:---:|:---:|---|
-| [Extended Kalman Filter](localization/ekf) | 🚧 | ⬜ | ⬜ | ⬜ | Jacobian check, NEES/NIS |
+| [Extended Kalman Filter](localization/ekf) | ✅ | ⬜ | ⬜ | ⬜ | Jacobian check, NEES/NIS |
 | [Unscented Kalman Filter](localization/ukf) | ⬜ | ⬜ | ⬜ | ⬜ | NEES vs. EKF |
 | [Particle Filter](localization/particle_filter) | ⬜ | ⬜ | ⬜ | ⬜ | RMSE vs. particle count |
 
