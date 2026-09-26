@@ -11,9 +11,6 @@
 
 ![Progress](https://img.shields.io/badge/progress-0%20%2F%2011%20complete-orange)
 
-
-[Roadmap](#-roadmap) · [Approach](#-approach) · [Quick Start](#-quick-start) · [Structure](#-repository-structure) · [References](#-references)
-
 </div>
 
 ---
