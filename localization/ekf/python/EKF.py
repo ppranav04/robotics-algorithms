@@ -17,13 +17,13 @@ def motion_model(state, control):
     return m_model
 
 
-def observation_model(state, meas):
+def observation_model(state, landmark):
     x = state[0,0]
     y = state[1,0]
     theta = state[2,0]
 
-    Ix = meas[0,0]
-    Iy = meas[1,0]
+    Ix = landmark[0,0]
+    Iy = landmark[1,0]
     
 
     r = math.sqrt(((Ix-x)**2)+((Iy-y)**2))
@@ -41,13 +41,13 @@ def jacob_f(state, control):
 
     return F
 
-def jacob_h(state, meas):
+def jacob_h(state, landmark):
     x = state[0,0]
     y = state[1,0]
     theta = state[2,0]
     
-    Ix = meas[0,0]
-    Iy = meas[1,0]
+    Ix = landmark[0,0]
+    Iy = landmark[1,0]
     
 
     r = math.sqrt(((Ix-x)**2)+((Iy-y)**2))
@@ -58,15 +58,15 @@ def jacob_h(state, meas):
 
     return H
 
-def EKF_estimate(xEst, PEst, u, z, meas):
+def EKF_estimate(xEst, PEst, u, z, landmark):
     jF = jacob_f(xEst, u)
     # Predict
     xPred = motion_model(xEst, u)
     PPred = jF @ PEst @ jF.T + Q
 
-    jH = jacob_h(xPred, meas)
+    jH = jacob_h(xPred, landmark)
     #Estimation
-    zPred = observation_model(xPred, meas)
+    zPred = observation_model(xPred, landmark)
     y = z - zPred
     y[1, 0] = math.atan2(math.sin(y[1, 0]), math.cos(y[1, 0]))
     s = jH @ PPred @ jH.T + R
