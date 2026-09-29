@@ -26,13 +26,6 @@ This repository is a structured study of the algorithms behind robot state estim
 
 Both implementations run on the **same scenario data file** and are checked against each other, so the C++ version is verified rather than assumed correct.
 
-> [!NOTE]
-> This is a learning repository, currently focused on building conceptual
-> understanding of each algorithm. Formal test suites (finite-difference
-> Jacobian checks, NEES/NIS consistency, etc.) are a deliberate later
-> phase, not a blocker on marking an algorithm's core implementation done.
-> Each algorithm's README contains the derivation in my own words, the
-> assumptions it depends on, and results I measured myself.
 
 ---
 
@@ -44,7 +37,7 @@ Both implementations run on the **same scenario data file** and are checked agai
 
 | Algorithm | Python | C++ | Docs |
 |---|:---:|:---:|:---:|
-| [Extended Kalman Filter](localization/ekf) | ✅ | 🚧 | 🚧 |
+| [Extended Kalman Filter](localization/ekf) | ✅ | ✅ | ✅ |
 | [Unscented Kalman Filter](localization/ukf) | ⬜ | ⬜ | ⬜ |
 | [Particle Filter](localization/particle_filter) | ⬜ | ⬜ | ⬜ |
 
@@ -52,7 +45,7 @@ Both implementations run on the **same scenario data file** and are checked agai
 
 | Algorithm | Python | C++ | Docs |
 |---|:---:|:---:|:---:|
-| [Graph-Based SLAM](slam/graph_slam) | ⬜ | ⬜ | ⬜ |
+| [Graph-Based SLAM](slam/graph_slam) | 🚧 | ⬜ | ⬜ |
 
 ### 🧭 Path Planning
 

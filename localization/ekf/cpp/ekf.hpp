@@ -16,5 +16,4 @@ struct EkfResult {
 };
 EkfResult EKF(const Eigen::Vector3d& xEst, const Eigen::Matrix3d& PEst,const Eigen::Vector2d& u, const Eigen::Vector2d& z, const Eigen::Vector2d& landmark, const Eigen::Matrix3d& Q, const Eigen::Matrix2d& R);
 
-
 }  // namespace ekf
