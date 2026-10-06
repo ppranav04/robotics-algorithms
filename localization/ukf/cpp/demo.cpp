@@ -17,8 +17,18 @@ int main(){
 
     cout << motion_model_result << '\n';
 
-    Eigen ::Vector2d obs_model_result;
+    Eigen::Vector2d obs_model_result;
     obs_model_result = ukf::observation_model(eg_state, eg_landmark);
 
     cout << obs_model_result << '\n';
+
+    int n= 3;
+    double a = 1;
+    double k = 0;
+    double b = 2;
+
+    Eigen::Matrix<double, 2, 7> weights_result;
+
+    weights_result = ukf::weights(n,k,a,b);
+    cout << weights_result << '\n';
 }
