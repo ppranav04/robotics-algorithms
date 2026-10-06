@@ -38,14 +38,14 @@ Both implementations run on the **same scenario data file** and are checked agai
 | Algorithm | Python | C++ | Docs |
 |---|:---:|:---:|:---:|
 | [Extended Kalman Filter](localization/ekf) | ✅ | ✅ | ✅ |
-| [Unscented Kalman Filter](localization/ukf) | ⬜ | ⬜ | ⬜ |
+| [Unscented Kalman Filter](localization/ukf) | ⬜ | 🚧 | ⬜ |
 | [Particle Filter](localization/particle_filter) | ⬜ | ⬜ | ⬜ |
 
 ### 🗺️ SLAM
 
 | Algorithm | Python | C++ | Docs |
 |---|:---:|:---:|:---:|
-| [Graph-Based SLAM](slam/graph_slam) | 🚧 | ⬜ | ⬜ |
+| [Graph-Based SLAM](slam/graph_slam) | ⬜ | ⬜ | ⬜ |
 
 ### 🧭 Path Planning
 
