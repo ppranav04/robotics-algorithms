@@ -13,4 +13,15 @@ namespace ukf {
                                             const double& gamma);
     Eigen::Matrix<double, 2, 7> weights(const int& n, const double& k, const double& alpha, const double& beta);
     
+    struct Predict_Result {
+        Eigen::Vector3d mean;
+        Eigen::Matrix3d covariance;
+    };
+
+    Eigen::Vector3d mean(const Eigen::Vector3d& state_estimate,  
+                             const Eigen::Matrix<double, 2, 7>& weights);
+    Eigen::Matrix3d covariance(const Eigen::Vector3d& state_estimate,
+                                const Eigen::Vector3d& predicted_mean,
+                                const Eigen::Matrix<double, 2, 7>& weights,
+                                const double& R);
 }

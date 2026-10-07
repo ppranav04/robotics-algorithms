@@ -3,13 +3,14 @@
 # 🤖 robotics-algorithms
 
 **From-scratch implementations of core robotics algorithms in Python and C++17**
+
 *Derived, implemented, and validated, one algorithm at a time.*
 
 
 ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=cplusplus&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 
-![Progress](https://img.shields.io/badge/progress-0%20%2F%2011%20complete-orange)
+*Progress: 1/11 completed*
 
 </div>
 

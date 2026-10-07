@@ -16,7 +16,8 @@ namespace ukf{
             kDt*sin(state(2)), 0,
             0                , kDt;
 
-        return state + B*control;
+        Eigen::Vector3d state_est = state + B*control;
+        return state_est;
     }
 
     // observation model
