@@ -29,6 +29,8 @@ int main(){
 
     Eigen::Matrix<double, 2, 7> weights_result;
 
-    weights_result = ukf::weights(n,k,a,b);
+    weights_result = ukf::generate_weights(n,k,a,b);
     cout << weights_result << '\n';
+
+    
 }
