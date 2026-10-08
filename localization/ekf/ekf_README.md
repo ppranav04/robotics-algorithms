@@ -60,7 +60,7 @@ SLAM: the map is given, only the robot's pose is uncertain.
 
 ## Results
 
-### Python (reference implementation)
+### Python implementation
 
 ![EKF localization simulation](./img/simulation.gif)
 
