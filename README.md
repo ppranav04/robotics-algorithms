@@ -38,8 +38,8 @@ Both implementations run on the **same scenario data file** and are checked agai
 
 | Algorithm | Python | C++ | Docs |
 |---|:---:|:---:|:---:|
-| [Extended Kalman Filter](localization/ekf) | ✅ | ✅ | ✅ |
-| [Unscented Kalman Filter](localization/ukf) | 🚧 | ✅ | ⬜ |
+| [Extended Kalman Filter](localization/ekf/ekf_README.md) | ✅ | ✅ | ✅ |
+| [Unscented Kalman Filter](localization/ukf/ukf_README.md) | 🚧 | ✅ | ⬜ |
 | [Particle Filter](localization/particle_filter) | ⬜ | ⬜ | ⬜ |
 
 ### 🗺️ SLAM
