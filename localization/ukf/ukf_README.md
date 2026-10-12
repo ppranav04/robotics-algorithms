@@ -117,6 +117,31 @@ Low error is not enough; the reported covariance `P` must match reality. Two sta
 
 Values well below the target mean the filter is underconfident (`Q` or `R` too large). Values well above mean it is overconfident, which is the dangerous direction because it will start ignoring good measurements.
 
+## Results
+
+C++ implementation (Eigen). A simulated unicycle follows a noisy path and observes one of four known landmarks per step.
+Parameters: `α = 1`, `β = 2`, `κ = 0`, `Q = R = 0.01`. Results are over 50 Monte Carlo runs with fixed seeds.
+
+| Metric | Result |
+|---|---|
+| Filter failures (covariance not positive-definite) | 0 / 50 |
+| Mean NEES (expected ≈ 3 for a 3-state filter) | 3.01 |
+| Mean final position error | 0.13 m |
+
+### Trajectory
+
+![UKF trajectory estimate](img/ukf_trajectory.png)
+
+The estimate (dashed) follows the ground truth (solid) from an initial pose that was deliberately wrong. The path wanders because the process noise `Q` is large.
+
+### Consistency
+
+![UKF NEES](img/ukf_nees.png)
+
+The mean NEES stays around 3, so the reported covariance matches the actual error: the filter is neither overconfident nor underconfident.
+
+The truth is generated from the same noise model the filter assumes, so this checks that the implementation is internally consistent, not that the noise values are realistic for a particular robot. NIS is not computed in this simulation.
+
 ## References
 
 - Wan and van der Merwe, "The Unscented Kalman Filter for Nonlinear Estimation" (2000)
